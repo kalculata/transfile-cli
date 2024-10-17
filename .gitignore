@@ -4,5 +4,8 @@ build/
 dist/
 
 .env
-*.json
 *egg-info
+
+# Translation file extensions
+*.json
+*.properties

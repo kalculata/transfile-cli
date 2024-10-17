@@ -12,6 +12,14 @@ Transfile CLI is a command-line tool that allows you to translate JSON files usi
 - Python 3.7 or higher
 - An OpenAI API key
 
+## Features
+- [x] *Multi-language Translation*: Translate `.json` and `.properties` files into multiple languages.
+- [ ] *Key Detection*: Detect existing keys and avoid translating them to reduce token usage with OpenAI API.
+- [ ] *Sorting*: Implement a sort command to sort translations.
+- [ ] *Group and Export*: Group translations and export them to Excel or CSV format.
+- [ ] *Extract from Excel/CSV*: Extract translations from Excel or CSV files.
+- [ ] *Folder Translation*: Translate all files in a specified folder using the command `transfile -f ./locales/ -s en.json`, automatically searching for translation files based on the given source file pattern and translating them.
+
 ## Installation
 
 1. **Clone the repository** (or download the source code):
@@ -21,18 +29,10 @@ git clone https://github.com/kalculata/transfile-cli.git
 cd transfile-cli
 ```
 
-2. Install the package:
-
-First, build the package:
+2. Build and install the package:
 
 ```bash
-python setup.py sdist bdist_wheel
-```
-
-Then, install it:
-
-```bash
-pip install .
+source ./install.sh
 ```
 
 3. Set up your OpenAI API Key:
@@ -84,3 +84,7 @@ This will create fr.json and es.json containing the translations.
 - Ensure that you have the correct Python version installed (3.7 or higher).
 - Verify that your OpenAI API key is correctly set in your environment variables.
 - If you encounter any module errors, make sure that your package is installed correctly and that you are in the correct virtual environment (if using one).
+
+## Todo
+
+- Support .properties
